@@ -100,14 +100,14 @@ h4 {
 }
 
 .card >>> .pagination .page-link {
-  background-color: #9c27b0;
+  background-color: #e83e8c;
   color: white;
-  border-color: #9c27b0;
+  border-color: #e83e8c;
 }
 
 .card >>> .pagination .active > .page-link {
-  background-color: #7a058f;
-  border-color: #7a058f;
+  background-color: #ce3b7f;
+  border-color: #ce3b7f;
 }
 .card >>> small {
   padding-left: 0 !important;

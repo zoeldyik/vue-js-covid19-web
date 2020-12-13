@@ -14,6 +14,15 @@
             :items="dataHarian"
             v-if="dataHarian.length"
           ></harian-table>
+
+          <penambahan-per-provinsi
+            v-if="penambahan_harian_provinsi && tanggal"
+            :items="penambahan_harian_provinsi"
+            :tanggal="tanggal"
+          >
+          </penambahan-per-provinsi>
+
+          <!-- bar -->
           <b-row class="mt-5">
             <b-col sm="6" class="mb-3 mb-md-0">
               <vue-bar v-if="positifHarian" :datas="positifHarian">
@@ -67,6 +76,7 @@ import header from "./components/header.vue";
 import dataProvinsi from "./components/provinsi-table.vue";
 import dataHarian from "./components/harian-table.vue";
 import bar from "./components/bar.vue";
+import penambahan_perprovinsi from "./components/penambahan-perprovinsi";
 
 export default {
   name: "App",
@@ -74,6 +84,7 @@ export default {
     "app-header": header,
     "provinsi-table": dataProvinsi,
     "harian-table": dataHarian,
+    "penambahan-per-provinsi": penambahan_perprovinsi,
     "vue-bar": bar,
   },
   data() {
@@ -81,6 +92,8 @@ export default {
       dataTotal: [],
       dataProvinsi: [],
       dataHarian: [],
+      penambahan_harian_provinsi: [],
+      tanggal: null,
       positifHarian: null,
       sembuhHarian: null,
       showLoader: true,
@@ -95,6 +108,7 @@ export default {
           )}`
         )
         .then((res) => {
+          // console.log('fungsi getTotal');
           // console.log(res);
           // console.log(res.data.update.total);
 
@@ -126,10 +140,11 @@ export default {
           )}`
         )
         .then((res) => {
+          // console.log("fungsi get provinsi");
           // console.log(res);
           // console.log(res.data.list_data);
           const datas = res.data.list_data;
-          const temp = [];
+          let temp = [];
 
           datas.forEach((el) => {
             temp.push({
@@ -142,7 +157,24 @@ export default {
           });
 
           this.dataProvinsi = temp;
-          // console.log(temp);
+          // console.log(this.dataProvinsi);
+
+          // penambahan_harian_provinsi
+          let tempTanggal;
+          temp = [];
+          datas.forEach((el) => {
+            temp.push({
+              provinsi: el.key,
+              positif: el.penambahan.positif,
+              sembuh: el.penambahan.sembuh,
+              meninggal: el.penambahan.meninggal,
+            });
+          });
+
+          tempTanggal = res.data.last_date.split("-");
+          this.tanggal = `${tempTanggal[2]}-${tempTanggal[1]}-${tempTanggal[0]}`;
+          this.penambahan_harian_provinsi = temp;
+          // console.log(tempTanggal);
         })
         .catch((err) => console.log(err));
     },
@@ -154,10 +186,11 @@ export default {
           )}`
         )
         .then((res) => {
-          console.log(res);
+          // console.log("fungsi getHarian");
+          // console.log(res);
           const datas = res.data.update.harian.slice(-15);
           const temp = [];
-          console.log(datas);
+          // console.log(datas);
 
           datas.forEach((el) => {
             temp.unshift({
@@ -174,7 +207,7 @@ export default {
             });
           });
 
-          console.log(temp);
+          // console.log(temp);
           this.dataHarian = temp;
 
           // data untuk bar
@@ -232,11 +265,11 @@ footer small {
 }
 
 footer a {
-  color: #7a058f;
+  color: #d73993;
 }
 
 footer a:hover {
-  color: #9c27b0;
+  color: #bd3481;
 }
 
 /* style for loader animation */

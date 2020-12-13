@@ -1,5 +1,5 @@
 <template>
-  <b-card no-body>
+  <b-card no-body class="py-2">
     <slot name="title"></slot>
     <bars
       :height="170"

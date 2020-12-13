@@ -4,7 +4,7 @@
       <h1 class="text-center d-block">
         Data
         <span
-          style="color: #9c27b0; font-weight: 400 opacity:1;"
+          style="color: #e83e8c; font-weight: 400 opacity:1;"
           class="font-weight-bold"
           >Covid-19</span
         >

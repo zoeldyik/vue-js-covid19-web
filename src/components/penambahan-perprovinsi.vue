@@ -1,34 +1,17 @@
 <template>
   <div class="data-provinsi mt-5">
-    <h4>Data Provinsi</h4>
+    <div class="text mb-2">
+      <h4>Data Harian Provinsi</h4>
+      <small class="text-muted">tanggal {{ tanggal }}</small>
+    </div>
 
     <div class="card p-1">
-      <div class="col-md-4 offset-md-8 p-0 pt-1 mb-1">
-        <b-input-group size="sm">
-          <b-form-input
-            v-model="filter"
-            type="search"
-            id="filterInput"
-            placeholder="Type to Search"
-          ></b-form-input>
-          <b-input-group-append>
-            <b-button
-              class="btn-filter"
-              :disabled="!filter"
-              @click="filter = ''"
-              >Clear</b-button
-            >
-          </b-input-group-append>
-        </b-input-group>
-      </div>
-
       <b-table
         borderless
         responsive
         table-variant="light"
         :per-page="perPage"
         :current-page="currentPage"
-        :filter="filter"
         :fields="fields"
         :items="items"
       ></b-table>
@@ -53,11 +36,14 @@ export default {
       type: Array,
       required: true,
     },
+    tanggal: {
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {
       filter: null,
-      filterOn: [],
       currentPage: 1,
       perPage: 7,
       fields: [
@@ -65,7 +51,6 @@ export default {
         { key: "positif" },
         { key: "sembuh" },
         { key: "meninggal" },
-        { key: "dirawat" },
       ],
     };
   },
@@ -79,6 +64,7 @@ export default {
 <style scoped>
 h4 {
   opacity: 0.8;
+  margin-bottom: -5px;
 }
 
 .card {
@@ -86,8 +72,7 @@ h4 {
 }
 
 .card .input-group > .input-group-append > .btn {
-  /* background-color: #9c27b0; */
-  background-color: #e83e8c;
+  background-color: #9c27b0;
   margin-left: 3px;
 }
 
@@ -96,8 +81,7 @@ h4 {
 }
 
 .input-group > .form-control:focus {
-  /* box-shadow: 0 0 3px 1px #9b27b0bb; */
-  box-shadow: 0 0 3px 1px #e83e8dc5;
+  box-shadow: 0 0 3px 1px #9b27b0bb;
 }
 
 .card >>> .table {
