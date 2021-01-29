@@ -51,6 +51,7 @@ export default {
         { key: "positif" },
         { key: "sembuh" },
         { key: "meninggal" },
+        { key: "dirawat" },
       ],
     };
   },
@@ -90,6 +91,11 @@ h4 {
 
 .card >>> .table tr th {
   width: 15%;
+  text-align: right;
+}
+
+.card >>> .table tr td {
+  text-align: right;
 }
 
 .card >>> .table tr th:first-child {

@@ -86,17 +86,24 @@ h4 {
 
 .card >>> .table tr th {
   width: 15%;
+  text-align: right;
+}
+
+.card >>> .table tr td {
+  text-align: right;
 }
 
 .card >>> .table tr th:first-child {
   width: auto;
   background-color: #1c2125;
   color: rgba(255, 255, 255, 0.8);
+  text-align: left;
 }
 
 .card >>> .table tr td:first-child {
   background-color: #1c2125;
   color: rgba(255, 255, 255, 0.8);
+  text-align: left;
 }
 
 .card >>> .pagination .page-link {

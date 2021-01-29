@@ -96,8 +96,21 @@ export default {
       tanggal: null,
       positifHarian: null,
       sembuhHarian: null,
-      showLoader: true,
     };
+  },
+  computed: {
+    showLoader() {
+      if (
+        this.dataTotal.length &&
+        this.dataProvinsi.length &&
+        this.dataHarian.length &&
+        this.penambahan_harian_provinsi.length
+      ) {
+        return false;
+      } else {
+        return true;
+      }
+    },
   },
   methods: {
     getTotal() {
@@ -112,12 +125,17 @@ export default {
           // console.log(res);
           // console.log(res.data.update.total);
 
-          const {
+          let {
             jumlah_positif,
             jumlah_dirawat,
             jumlah_meninggal,
             jumlah_sembuh,
           } = res.data.update.total;
+
+          jumlah_positif = jumlah_positif.toLocaleString("ID");
+          jumlah_dirawat = jumlah_dirawat.toLocaleString("ID");
+          jumlah_meninggal = jumlah_meninggal.toLocaleString("ID");
+          jumlah_sembuh = jumlah_sembuh.toLocaleString("ID");
 
           const data = [
             { name: "POSITIF", value: jumlah_positif },
@@ -149,10 +167,10 @@ export default {
           datas.forEach((el) => {
             temp.push({
               provinsi: el.key,
-              positif: el.jumlah_kasus,
-              sembuh: el.jumlah_sembuh,
-              meninggal: el.jumlah_meninggal,
-              dirawat: el.jumlah_dirawat,
+              positif: el.jumlah_kasus.toLocaleString("ID"),
+              sembuh: el.jumlah_sembuh.toLocaleString("ID"),
+              meninggal: el.jumlah_meninggal.toLocaleString("ID"),
+              dirawat: el.jumlah_dirawat.toLocaleString("ID"),
             });
           });
 
@@ -165,9 +183,14 @@ export default {
           datas.forEach((el) => {
             temp.push({
               provinsi: el.key,
-              positif: el.penambahan.positif,
-              sembuh: el.penambahan.sembuh,
-              meninggal: el.penambahan.meninggal,
+              positif: el.penambahan.positif.toLocaleString("ID"),
+              sembuh: el.penambahan.sembuh.toLocaleString("ID"),
+              meninggal: el.penambahan.meninggal.toLocaleString("ID"),
+              dirawat: (
+                el.penambahan.positif -
+                el.penambahan.sembuh -
+                el.penambahan.meninggal
+              ).toLocaleString("ID"),
             });
           });
 
@@ -200,10 +223,10 @@ export default {
                 parseInt(new Date(el.key_as_string).getMonth() + 1) +
                 "-" +
                 new Date(el.key_as_string).getFullYear(),
-              positif: el.jumlah_positif.value,
-              sembuh: el.jumlah_sembuh.value,
-              meninggal: el.jumlah_meninggal.value,
-              dirawat: el.jumlah_dirawat.value,
+              positif: el.jumlah_positif.value.toLocaleString("ID"),
+              sembuh: el.jumlah_sembuh.value.toLocaleString("ID"),
+              meninggal: el.jumlah_meninggal.value.toLocaleString("ID"),
+              dirawat: el.jumlah_dirawat.value.toLocaleString("ID"),
             });
           });
 
@@ -226,9 +249,9 @@ export default {
     this.getTotal();
     this.getProvinsi();
     this.getHarian();
-    setTimeout(() => {
-      this.showLoader = false;
-    }, 800);
+    // setTimeout(() => {
+    //   this.showLoader = false;
+    // }, 800);
   },
 };
 </script>

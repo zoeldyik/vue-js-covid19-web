@@ -31,6 +31,7 @@
         :filter="filter"
         :fields="fields"
         :items="items"
+        show-empty
       ></b-table>
 
       <b-pagination
@@ -56,8 +57,7 @@ export default {
   },
   data() {
     return {
-      filter: null,
-      filterOn: [],
+      filter: "",
       currentPage: 1,
       perPage: 7,
       fields: [
@@ -71,7 +71,8 @@ export default {
   },
   computed: {
     totalRows() {
-      return this.items.length;
+      return this.items.filter((item) => item.provinsi.includes(this.filter))
+        .length;
     },
   },
 };
@@ -106,6 +107,11 @@ h4 {
 
 .card >>> .table tr th {
   width: 15%;
+  text-align: right;
+}
+
+.card >>> .table tr td {
+  text-align: right;
 }
 
 .card >>> .table tr th:first-child {
