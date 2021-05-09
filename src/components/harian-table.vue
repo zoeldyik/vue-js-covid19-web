@@ -2,7 +2,7 @@
   <div class="data-harian mt-5">
     <h4>Data Harian</h4>
 
-    <div class="card p-1">
+    <div class="box p-1">
       <b-table
         borderless
         responsive
@@ -63,50 +63,50 @@ h4 {
   opacity: 0.8;
 }
 
-.card {
+.box {
   background-color: #191919;
 }
-.card .table-responsive {
+.box .table-responsive {
   margin: 0;
 }
 
-.card >>> .table {
+.box >>> .table {
   color: rgba(33, 37, 41, 0.76);
 }
 
-.card >>> .table tr th {
+.box >>> .table tr th {
   width: 15%;
   text-align: right;
 }
 
-.card >>> .table tr td {
+.box >>> .table tr td {
   text-align: right;
 }
 
-.card >>> .table tr th:first-child {
+.box >>> .table tr th:first-child {
   width: auto;
   background-color: #191919;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
 }
 
-.card >>> .table tr td:first-child {
+.box >>> .table tr td:first-child {
   background-color: #191919;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
 }
 
-.card >>> .pagination .page-link {
+.box >>> .pagination .page-link {
   background-color: #2ac17f;
   color: white;
   border-color: #2ac17f;
 }
 
-.card >>> .pagination .active > .page-link {
+.box >>> .pagination .active > .page-link {
   background-color: #1eb674;
   border-color: #1eb674;
 }
-.card >>> small {
+.box >>> small {
   padding-left: 0 !important;
 }
 </style>

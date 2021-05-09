@@ -2,7 +2,7 @@
   <div class="data-provinsi mt-5">
     <h4>Data Provinsi</h4>
 
-    <div class="card p-1">
+    <div class="box p-1">
       <div class="col-md-4 offset-md-8 p-0 pt-1 mb-1">
         <b-input-group size="sm">
           <b-form-input
@@ -82,17 +82,17 @@ h4 {
   opacity: 0.8;
 }
 
-.card {
+.box {
   background-color: #191919;
 }
 
-.card .input-group > .input-group-append > .btn {
+.box .input-group > .input-group-append > .btn {
   background-color: #2ac17f;
   color: #fff;
   margin-left: 3px;
 }
 
-.card .table-responsive {
+.box .table-responsive {
   margin: 0;
 }
 
@@ -100,39 +100,39 @@ h4 {
   box-shadow: 0 0 1px 1px rgb(42, 193, 127, 0.2);
 }
 
-.card >>> .table {
+.box >>> .table {
   color: rgba(33, 37, 41, 0.76);
 }
 
-.card >>> .table tr th {
+.box >>> .table tr th {
   width: 15%;
   text-align: right;
 }
 
-.card >>> .table tr td {
+.box >>> .table tr td {
   text-align: right;
 }
 
-.card >>> .table tr th:first-child {
+.box >>> .table tr th:first-child {
   background-color: #191919;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
   width: auto;
 }
 
-.card >>> .table tr td:first-child {
+.box >>> .table tr td:first-child {
   background-color: #191919;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
 }
 
-.card >>> .pagination .page-link {
+.box >>> .pagination .page-link {
   background-color: #2ac17f;
   color: white;
   border-color: #2ac17f;
 }
 
-.card >>> .pagination .active > .page-link {
+.box >>> .pagination .active > .page-link {
   background-color: #1eb674;
   border-color: #1eb674;
 }

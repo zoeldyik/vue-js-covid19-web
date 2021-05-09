@@ -13,8 +13,8 @@
     </div>
 
     <div class="col-md-6 mb-3" v-for="(data, index) in datas" :key="index">
-      <div class="card">
-        <div class="card-body d-flex">
+      <div class="box">
+        <div class="box-body d-flex">
           <div class="text">
             <h5 class="font-italic">{{ data.name }}</h5>
             <h3>{{ data.value }}</h3>
@@ -43,11 +43,11 @@ export default {
 </script>
 
 <style scoped>
-.card {
+.box {
   background-color: #191919;
 }
 
-.card img {
+.box img {
   width: 4rem;
 }
 

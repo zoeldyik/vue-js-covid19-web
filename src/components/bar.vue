@@ -1,5 +1,5 @@
 <template>
-  <b-card no-body class="py-2">
+  <div class="box py-2">
     <slot name="title"></slot>
     <bars
       :height="170"
@@ -10,7 +10,7 @@
       :gradient="['#2ac17f', '#16975f']"
     >
     </bars>
-  </b-card>
+  </div>
 </template>
 
 <script>
@@ -28,10 +28,10 @@ export default {
 </script>
 
 <style scoped>
-.card {
+.box {
   background-color: #191919;
 }
-.card .card-body {
+.box .box-body {
   padding: 10px !important;
 }
 </style>
