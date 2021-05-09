@@ -7,7 +7,7 @@
       :labelData="datas"
       :labelRotate="-40"
       :rounding="2"
-      :gradient="['#e83e8c', '#9c27b0']"
+      :gradient="['#2ac17f', '#16975f']"
     >
     </bars>
   </b-card>
@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 .card {
-  background-color: #2e2e2e;
+  background-color: #212121;
 }
 .card .card-body {
   padding: 10px !important;

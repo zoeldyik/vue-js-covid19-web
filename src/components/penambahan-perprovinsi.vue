@@ -69,7 +69,7 @@ h4 {
 }
 
 .card {
-  background-color: #2e2e2e;
+  background-color: #212121;
 }
 
 .card .input-group > .input-group-append > .btn {
@@ -99,26 +99,26 @@ h4 {
 }
 
 .card >>> .table tr th:first-child {
-  background-color: #2e2e2e;
+  background-color: #212121;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
   width: auto;
 }
 
 .card >>> .table tr td:first-child {
-  background-color: #2e2e2e;
+  background-color: #212121;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
 }
 
 .card >>> .pagination .page-link {
-  background-color: #e83e8c;
+  background-color: #2ac17f;
   color: white;
-  border-color: #e83e8c;
+  border-color: #2ac17f;
 }
 
 .card >>> .pagination .active > .page-link {
-  background-color: #ce3b7f;
-  border-color: #ce3b7f;
+  background-color: #1eb674;
+  border-color: #1eb674;
 }
 </style>

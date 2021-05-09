@@ -4,7 +4,7 @@
       <h1 class="text-center d-block">
         Data
         <span
-          style="color: #e83e8c; font-weight: 400 opacity:1;"
+          style="color: #2ac17f; font-weight: 400 opacity:1;"
           class="font-weight-bold"
           >Covid-19</span
         >
@@ -44,7 +44,7 @@ export default {
 
 <style scoped>
 .card {
-  background-color: #2e2e2e;
+  background-color: #212121;
 }
 
 .card img {

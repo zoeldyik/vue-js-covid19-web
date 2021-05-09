@@ -260,7 +260,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,300&display=swap");
 #app {
   font-family: "Roboto", sans-serif;
-  background-color: #191919;
+  background-color: #212121;
   /* background-color: #212529; */
   color: rgba(255, 255, 255, 0.9);
   min-height: 100vh;
@@ -272,7 +272,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #191919;
+  background-color: #212121;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -288,11 +288,11 @@ footer small {
 }
 
 footer a {
-  color: #d73993;
+  color: #2ac17f;
 }
 
 footer a:hover {
-  color: #bd3481;
+  color: #1eb674;
 }
 
 /* style for loader animation */

@@ -83,12 +83,12 @@ h4 {
 }
 
 .card {
-  background-color: #2e2e2e;
+  background-color: #212121;
 }
 
 .card .input-group > .input-group-append > .btn {
-  /* background-color: #9c27b0; */
-  background-color: #e83e8c;
+  background-color: #2ac17f;
+  color: #fff;
   margin-left: 3px;
 }
 
@@ -97,8 +97,7 @@ h4 {
 }
 
 .input-group > .form-control:focus {
-  /* box-shadow: 0 0 3px 1px #9b27b0bb; */
-  box-shadow: 0 0 3px 1px #e83e8dc5;
+  box-shadow: 0 0 1px 1px rgb(42, 193, 127, 0.2);
 }
 
 .card >>> .table {
@@ -115,26 +114,26 @@ h4 {
 }
 
 .card >>> .table tr th:first-child {
-  background-color: #2e2e2e;
+  background-color: #212121;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
   width: auto;
 }
 
 .card >>> .table tr td:first-child {
-  background-color: #2e2e2e;
+  background-color: #212121;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
 }
 
 .card >>> .pagination .page-link {
-  background-color: #e83e8c;
+  background-color: #2ac17f;
   color: white;
-  border-color: #e83e8c;
+  border-color: #2ac17f;
 }
 
 .card >>> .pagination .active > .page-link {
-  background-color: #ce3b7f;
-  border-color: #ce3b7f;
+  background-color: #1eb674;
+  border-color: #1eb674;
 }
 </style>
