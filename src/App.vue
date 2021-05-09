@@ -281,6 +281,7 @@ h6 {
 
 footer small {
   color: rgba(255, 255, 255, 0.65);
+  line-height: 1;
 }
 
 footer a {

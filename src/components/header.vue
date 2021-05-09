@@ -6,14 +6,14 @@
         <span
           style="color: #2ac17f; font-weight: 400 opacity:1;"
           class="font-weight-bold"
-          >Covid-19</span
-        >
+          >Covid
+        </span>
         Indonesia
       </h1>
     </div>
 
     <div class="col-md-6 mb-3" v-for="(data, index) in datas" :key="index">
-      <div class="box">
+      <div class="box py-2 px-3 px-md-0">
         <div class="box-body d-flex">
           <div class="text">
             <h5 class="font-italic">{{ data.name }}</h5>
@@ -53,6 +53,7 @@ export default {
 
 h1 {
   opacity: 0.9;
+  line-height: 1;
 }
 
 h5 {
