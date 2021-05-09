@@ -83,7 +83,7 @@ h4 {
 }
 
 .card {
-  background-color: #212121;
+  background-color: #191919;
 }
 
 .card .input-group > .input-group-append > .btn {
@@ -114,14 +114,14 @@ h4 {
 }
 
 .card >>> .table tr th:first-child {
-  background-color: #212121;
+  background-color: #191919;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
   width: auto;
 }
 
 .card >>> .table tr td:first-child {
-  background-color: #212121;
+  background-color: #191919;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
 }

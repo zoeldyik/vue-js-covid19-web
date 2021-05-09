@@ -64,7 +64,7 @@ h4 {
 }
 
 .card {
-  background-color: #212121;
+  background-color: #191919;
 }
 .card .table-responsive {
   margin: 0;
@@ -85,13 +85,13 @@ h4 {
 
 .card >>> .table tr th:first-child {
   width: auto;
-  background-color: #212121;
+  background-color: #191919;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
 }
 
 .card >>> .table tr td:first-child {
-  background-color: #212121;
+  background-color: #191919;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
 }
