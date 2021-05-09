@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 .card {
-  background-color: #1c2125;
+  background-color: #2e2e2e;
 }
 .card .card-body {
   padding: 10px !important;

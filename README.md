@@ -1,5 +1,6 @@
 # covid-app
 
 ### made with vue
-website live at https://tastes.netlify.app/
-data berasal dari api https://github.com/mathdroid/indonesia-covid-19-api
+
+website live at https://tastes-covid.netlify.app/
+data berasal dari api https://data.covid19.go.id/public/api/update.json
